@@ -79,7 +79,7 @@ export default function SignUp() {
         <div className={styles.registerPage}>
         <FontAwesomeIcon icon={faTwitter} size="2xl" color="blue" />
           <div>
-            <h1>Register</h1>
+            <h1>SignUp</h1>
           </div>
           <form onSubmit={handleSubmit}>
             <span>
