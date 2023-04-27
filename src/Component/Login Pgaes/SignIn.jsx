@@ -6,7 +6,13 @@ import { useNavigate } from 'react-router-dom';
 import {faTwitter} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+
 export default function SignIn() {
+
+  const navigate = useNavigate();
+
+ 
+
   const userNameRef = useRef();
   const passwordRef = useRef();
 
@@ -17,9 +23,26 @@ export default function SignIn() {
   
   const nav = useNavigate();
 
+  useEffect(() => {
+    const loginSuccesss = JSON.parse(localStorage.getItem("login-success"));
+
+    if (loginSuccesss) {
+      navigate("/");
+    }
+  }, []);
+
+
+  const handleSignin=()=>{
+    localStorage.setItem("login-success", "true");
+    navigate("/");
+  
+
+  }
+
 
   useEffect(()=>{
     const data = getUsers(); 
+ 
     setUserList(data);
    },[])
   
@@ -45,9 +68,7 @@ export default function SignIn() {
     }
   }
 
-  function handleSignUp(){
-    nav('/signup')
-  }
+
   return (
 
    <div>
@@ -61,17 +82,16 @@ export default function SignIn() {
             </div>
             <div>
               <form  onSubmit={handleSubmit}>
-                <span>
-                  <label>UserName : </label>
-                  <input ref={userNameRef} type='text' placeholder='username' required/>
-                </span>
+               
+                  <button ref={userNameRef} >Sign In With Google  </button>
+                
 
-                <span>
-                  <label>Password : </label>
+                  <input ref={userNameRef} type='username' placeholder='username' required/>
+                 
                   <input ref={passwordRef} type='password' placeholder='password' required/>
-                </span>
+              
 
-                <button className = {styles.signInBtn} type="submit"  >SignIn</button> 
+                <button className = {styles.signInBtn} type="submit" onClick={handleSignin} >SignIn</button> 
               </form>
             </div>
             <div>
