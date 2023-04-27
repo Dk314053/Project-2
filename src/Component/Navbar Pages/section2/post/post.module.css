@@ -1,0 +1,20 @@
+.postProfileimg{
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+    float: left;
+}
+.postImg{
+    width: 100%;
+}
+.icon{
+    display: flex;
+    width: 100%;
+}
+.comment{width: 20%;}
+
+.retweet{width: 20%;}
+.like{width: 20%;}
+.views{width: 20%;}
+.share{width: 20%;}
