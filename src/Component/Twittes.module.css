@@ -1,0 +1,14 @@
+.posts{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 1px solid #e6ecf0;
+    background-color: aliceblue;
+}
+.posts_home{
+    width: 50%;
+    position: fixed;
+    top: 0;
+    padding: 15px;
+    font-weight: 700;
+    border-bottom: 1px solid #e6ecf0;
+}
