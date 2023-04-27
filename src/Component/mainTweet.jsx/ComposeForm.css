@@ -1,0 +1,28 @@
+.compose-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 5px;
+    border: 1px solid rgb(3, 47, 80);
+  }
+  
+  .compose-form-container {
+    display: flex;
+    width: 100%;
+  }
+  .compose-form-submit {
+    flex: 0 0 auto;
+    padding: 5px 15px;
+    width: auto;
+    line-height: 20px;
+    background-color: rgb(29, 161, 242);
+    color: white;
+    border-radius: 30px;
+    border: 0;
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+  .main-container-wrap{
+    height: 90%;
+    width: 90%;
+  }
