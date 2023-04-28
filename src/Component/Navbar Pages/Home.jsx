@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link,useNavigate } from 'react-router-dom'
-import { getUsers } from '../Login Pgaes/localstorage'
+import { useNavigate } from 'react-router-dom'
 // import { getUsers } from '../Login Pgaes/localstorage'
 import styles from "./home.module.css"
 import {useEffect} from 'react'
@@ -25,7 +24,7 @@ function Home() {
      <Column2/>
      <Column3/>
    </div>
-   <Link to="/signin">sign in</Link>
+   
    
    </>
   )

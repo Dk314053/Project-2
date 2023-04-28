@@ -97,7 +97,7 @@ export default function SignIn() {
               </form>
             </div>
             <div>
-              <span>Don't Have an account ??<Link to="/signup"> <button  className={styles.signUpBtn} >SignUp </button> </Link></span>
+              <span>Don't Have an account ?? <button onClick={handleSignUp} className={styles.signUpBtn} >SignUp </button> </span>
             </div>
 
         </div>
