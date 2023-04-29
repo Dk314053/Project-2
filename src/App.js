@@ -6,10 +6,11 @@ import Sidebar from './Component/Sidebar';
 import Twittes from './Component/Twittes';
 import CreateTweet from './Component/CreateTweet';
 
+
 function App() {
   return (
   <>
- 
+ {/* <Trends/> */}
   
   <div className='twitter'>
   <Sidebar/>
