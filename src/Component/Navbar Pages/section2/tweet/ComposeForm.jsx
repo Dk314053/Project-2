@@ -3,7 +3,8 @@ import "./ComposeForm.css";
 import { useState } from "react";
 import Button from '@mui/material/Button';
 import TweetCard from "react-tweet-card";
-
+import { FaCalendarCheck, FaRegImage, FaRegListAlt, FaRegSmile } from 'react-icons/fa'
+import styles from "./CreateTweet.module.css"
 function ComposeForm() {
   const [editorValue, setEditorValue] = useState("");
   const [tweets, setTweets] = useState([]);
@@ -30,24 +31,33 @@ function ComposeForm() {
       
       <form className="compose-form" onSubmit={handleSubmit}>
         <div className="compose-form-container">
-        <h1>Home</h1> 
+        <h1>Home</h1> <div className={styles.topbtn}>
                <Button variant="text">For you</Button>
-               <Button variant="Following">For you</Button>
+               <Button variant="text">Following</Button>
+               </div>
               <hr/>
                </div>
-               <div>
+               <div className={styles.inputcstn}>
                 <img className="tweetImg" src='https://pbs.twimg.com/profile_images/1382083582752096262/xrx0PO8Z_400x400.jpg  '/>
                
-                <textarea rows="3" value={editorValue}
-                 onChange={handleEditorValueChange} label="What's happening"/>
-                 
-          
-        </div>
-        <button  class="btn btn-primary" type="submit"
-        
-    
-        onClick={handleFormSubmit}> {" "}Tweet</button>
+                <textarea rows="1" value={editorValue}
+                 onChange={handleEditorValueChange} placeholder="Whats's happening"/>
+                 </div>
+                 <div className={styles.create_second}>
+                    <div className={styles.create_icons}>
+                  <FaRegImage className={styles.ic}/>
+                  <FaRegListAlt className={styles.ic}/>
+                  <FaRegSmile className={styles.ic}/>
+                  <FaCalendarCheck className={styles.ic}/>
+                  </div>
+                  <div className={styles.create_btn}>
+                  <button  class="btn btn-primary" style={{borderRadius:"1rem"}} type="submit"
+                  onClick={handleFormSubmit}> {" "}Tweet</button>
 
+                  </div>
+                </div>
+
+                  
         
       
       </form>
