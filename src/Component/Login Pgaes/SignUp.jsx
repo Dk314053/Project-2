@@ -5,6 +5,9 @@ import styles from "./SignUp.module.css";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faTwitter} from "@fortawesome/free-brands-svg-icons";
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 export default function SignUp() {
   const emailRef = useRef();
@@ -83,28 +86,38 @@ export default function SignUp() {
           </div>
           <form onSubmit={handleSubmit}>
             <span>
-              <label>Email : </label>
-              <input ref={emailRef} type="email" placeholder="Enter Email" required />
+            
+              <input   className={styles.input} ref={emailRef} type="email" placeholder="Enter Email" required />
             </span>
 
             <span>
-              <label>Username : </label>
-              <input ref={userNameRef} type="text" placeholder="username" required/>
+            
+              <input  className={styles.input} ref={userNameRef} type="text" placeholder="username" required/>
             </span>
             <span>
-              <label>First Name : </label>
-              <input ref={firstNameRef} type="text" placeholder="First Name" required/>
+            
+              <input  className={styles.input} ref={firstNameRef} type="text" placeholder="First Name" required/>
             </span>
 
             <span>
-              <label>Last Name : </label>
-              <input ref={lastNameRef} type="text" placeholder="Last Name" required/>
+             
+              <input  className={styles.input} ref={lastNameRef} type="text" placeholder="Last Name" required/>
             </span>
             <span>
-              <label>Password : </label>
-              <input ref={passwordRef} type="password" placeholder="password" required/>
+             
+              <input  className={styles.input} ref={passwordRef} type="password" placeholder="password" required/>
             </span>
             {error && <p style={{ fontSize: '12px', color: 'red' }}>{error}</p>}
+            
+            <p>
+                <h3>Date of birth</h3>
+                This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or something else.
+                
+              </p>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                               <DatePicker/>
+              </LocalizationProvider>
+
             <button
               className={styles.signUpBtn}
               type="submit"

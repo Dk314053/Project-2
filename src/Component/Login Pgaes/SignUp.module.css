@@ -2,26 +2,27 @@
     border: .5px solid grey;
     width: 100%;
     height: 100%;
-    
-   
+    background-color: gray;
     background-repeat: no-repeat;
     background-size: cover;
     
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center; 
 }
+ .heading{
+    float: left;
+ }
 
 .registerPage{
    display: flex;
    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: solid;
-    width: 30%;
+    width: 50%;
+    border-radius: 2rem;
     margin: 8% 20%;
-    background-color: aliceblue;
+    background-color:white;
 }
 
  form{
@@ -33,18 +34,29 @@
 } 
 
 
-input{
+.input{
     display: inline;
-    height: 2rem;
-    width: 25rem;
-    border: 1px solid gray;
-    border-radius: 10px;
+   width: 80vh;
+
+   height: 3rem ;
+    border: 1px solid rgb(184, 178, 178);
+    border-radius: .5rem;
+    
+}
+.input:focus{
+   outline-color: #2196f3;
 }
 
 .signUpBtn{
     width: 100%;
     height: 2rem;
+    border-radius: 2rem;
     cursor: pointer;
+    background-color: gray;
+    color: white;
+    height: 3rem;
+    text-align: center;
+
 }
 
 
@@ -52,304 +64,4 @@ input{
 .signInBtn{
     width: 100%;
     height: 2rem;
-}
-
-@media only screen and (min-width: 300px) and (max-width : 400px) {
-
-    .parentCont{
-        border: .5px solid grey;
-        width: 100%;
-        height: 100%;
-        
-       
-        background-repeat: no-repeat;
-        background-size: cover;
-        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-    
-    .registerPage{
-       display: flex;
-       flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border: solid;
-        width: 60%;
-        margin: 8% 10%;
-        background-color: aliceblue;
-    }
-    
-     form{
-        display: flex;
-        flex-direction: column; 
-        gap : 20px;
-    
-        
-    } 
-    
-    
-    input{
-        display: inline;
-        height: 2rem;
-        width: 10rem;
-        border: 1px solid gray;
-        border-radius: 10px;
-    }
-    
-    .signUpBtn{
-        width: 100%;
-        height: 2rem;
-        cursor: pointer;
-    }
-    
-    
-    
-    .signInBtn{
-        width: 100%;
-        height: 2rem;
-    }
-
-}
-@media only screen and (min-width: 400px) and (max-width : 600px) {
-
-    .parentCont{
-        border: .5px solid grey;
-        width: 100%;
-        height: 100%;
-        
-       
-        background-repeat: no-repeat;
-        background-size: cover;
-        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-    
-    .registerPage{
-       display: flex;
-       flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border: solid;
-        width: 60%;
-        margin: 8% 20%;
-        background-color: aliceblue;
-    }
-    
-     form{
-        display: flex;
-        flex-direction: column; 
-        gap : 20px;
-    
-        
-    } 
-    
-    
-    input{
-        display: inline;
-        height: 2rem;
-        width: 15rem;
-        border: 1px solid gray;
-        border-radius: 10px;
-    }
-    
-    .signUpBtn{
-        width: 100%;
-        height: 2rem;
-        cursor: pointer;
-    }
-    
-    
-    
-    .signInBtn{
-        width: 100%;
-        height: 2rem;
-    }
-
-}
-
-
-
-@media only screen and (min-width: 600px) and (max-width : 800px){
-
-    .parentCont{
-        border: .5px solid grey;
-        width: 100%;
-        height: 100%;
-        
-       
-        background-repeat: no-repeat;
-        background-size: cover;
-        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-    
-    .registerPage{
-       display: flex;
-       flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border: solid;
-        width: 60%;
-        margin: 8% 25%;
-        background-color: aliceblue;
-    }
-    
-     form{
-        display: flex;
-        flex-direction: column; 
-        gap : 20px;
-    
-        
-    } 
-    
-    
-    input{
-        display: inline;
-        height: 2rem;
-        width: 20rem;
-        border: 1px solid gray;
-        border-radius: 10px;
-    }
-    
-    .signUpBtn{
-        width: 100%;
-        height: 2rem;
-        cursor: pointer;
-    }
-    
-    
-    
-    .signInBtn{
-        width: 100%;
-        height: 2rem;
-    }
-
-}
-
-@media only screen and (min-width: 800px) and (max-width : 1200px) {
-
-    .parentCont{
-        border: .5px solid grey;
-        width: 100%;
-        height: 100%;
-        
-       
-        background-size: cover;
-        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-    
-    .registerPage{
-       display: flex;
-       flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border: solid;
-        width: 30%;
-        margin: 8% 20%;
-        background-color: aliceblue;
-    }
-    
-     form{
-        display: flex;
-        flex-direction: column; 
-        gap : 20px;
-    
-        
-    } 
-    
-    
-    input{
-        display: inline;
-        height: 2rem;
-        width: 20rem;
-        border: 1px solid gray;
-        border-radius: 10px;
-    }
-    
-    .signUpBtn{
-        width: 100%;
-        height: 2rem;
-        cursor: pointer;
-    }
-    
-    
-    
-    .signInBtn{
-        width: 100%;
-        height: 2rem;
-    }
-
-}
-
-@media only screen and (min-width: 1200px) and (max-width : 1400px) {
-
-    .parentCont{
-        border: .5px solid grey;
-        width: 100%;
-        height: 100%;
-        
-      
-        background-repeat: no-repeat;
-        background-size: cover;
-        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-    
-    .registerPage{
-       display: flex;
-       flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border: solid;
-        width: 30%;
-        margin: 8% 20%;
-        background-color: aliceblue;
-    }
-    
-     form{
-        display: flex;
-        flex-direction: column; 
-        gap : 20px;
-    
-        
-    } 
-    
-    
-    input{
-        display: inline;
-        height: 2rem;
-        width: 25rem;
-        border: 1px solid gray;
-        border-radius: 10px;
-    }
-    
-    .signUpBtn{
-        width: 100%;
-        height: 2rem;
-        cursor: pointer;
-    }
-    
-    
-    
-    .signInBtn{
-        width: 100%;
-        height: 2rem;
-    }
-
 }

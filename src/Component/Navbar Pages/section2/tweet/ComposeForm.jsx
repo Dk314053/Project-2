@@ -27,8 +27,10 @@ function ComposeForm() {
 
   return (
     <div className="main-container-wrap">
+      
       <form className="compose-form" onSubmit={handleSubmit}>
         <div className="compose-form-container">
+        <h1>Home</h1> 
                <Button variant="text">For you</Button>
                <Button variant="Following">For you</Button>
               <hr/>

@@ -2,9 +2,7 @@ body{
     margin: 0;
     padding: 0;
 }
-.icon{
-    
-}
+
 form{
     display: flex;
     flex-direction: column;
@@ -12,31 +10,49 @@ form{
 }
 
 .parentCont{
-    border: 1px solid grey;
-    width : 100%;
-    height: 80%;
+  
+    width: 100%;
+    height: 100%;
     
-    background-color: rgb(215, 210, 203);
-    
+   background-color: gray;
     background-repeat: no-repeat;
     background-size: cover;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .login{
+    margin-top: 5%;
     border: .5px solid gray;
-    width: 30%;
-    height: 30rem;
-    background-color: rgb(216, 228, 236);
-    margin: 10% 35%;
+    width: 50%;
+    background-color: white;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    text-align: center;
+   
 
+}
+.input{
+    display: inline;
+   width: 100%;
+   height: 3rem ;
+    border: 1px solid rgb(184, 178, 178);
+    border-radius: .5rem;
+    
+}
+.input:focus{
+   outline-color: #2196f3;
 }
 
 .signInBtn{
     width: 100%;
+    height:100%;
     height: 2rem;
     cursor: pointer;
 }
@@ -44,112 +60,4 @@ form{
 .signUpBtn{
     width: 80%;
     height: 1.5rem;
-}
-
-@media only screen and (min-width: 800px) and (max-width : 1200px) {
-
-    .parentCont{
-        border: 1px solid grey;
-        width : 100%;
-        height: 80%;
-        
-        background-color: rgb(215, 210, 203);
-       
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .login{
-        border: .5px solid gray;
-        width: 50%;
-        height: 30rem;
-        background-color: rgb(216, 228, 236);
-        margin: 10% 20%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-    }
-
-    form input{
-        display: inline;
-        height: 2rem;
-        width: 100%;
-        border: 1px solid gray;
-        border-radius: 10px;
-    }
-
-}
-
-@media only screen and (min-width: 1200px) and (max-width : 1400px) {
-
-    .parentCont{
-        border: 1px solid grey;
-        width : 100%;
-        height: 80%;
-        
-        background-color: rgb(215, 210, 203);
-       
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .login{
-        border: .5px solid gray;
-        width: 40%;
-        height: 30rem;
-        background-color: rgb(216, 228, 236);
-        margin: 10% 20%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-    }
-
-    input{
-        display: inline;
-        height: 2rem;
-        width: 100%;
-        border: 1px solid gray;
-        border-radius: 10px;
-    }
-
-}
-
-@media only screen and (min-width: 300px) and (max-width : 750px) {
-
-    .parentCont{
-        border: 1px solid grey;
-        width : 100%;
-        height: 80%;
-        
-        background-color: rgb(215, 210, 203);
-       
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .login{
-        border: .5px solid gray;
-        width: 80%;
-        height: 30rem;
-        background-color: rgb(216, 228, 236);
-        margin: 10% 10%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
-    }
-
-    input{
-        display: inline;
-        height: 2rem;
-        width: 25rem;
-        border: 1px solid gray;
-        border-radius: 10px;
-    }
-
 }

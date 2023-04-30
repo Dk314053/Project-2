@@ -5,6 +5,7 @@ import {faFaceSmile,faFaceFrown} from '@fortawesome/free-solid-svg-icons'
 import { useState } from "react";
 
 import Styles from "./Trend.module.css";
+import { Button } from "@mui/material";
 
 export default function Trend() {
 
@@ -125,8 +126,8 @@ const handleShow=()=>{
             </span>
           </div>
         ))}
-          
-  <button className={Styles.ShowMore} onClick={handleShow}> Show More  </button>
+          <Button  onClick={handleShow} size="small">Show More </Button>
+  
        
       </div>
     </>

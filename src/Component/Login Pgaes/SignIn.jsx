@@ -6,6 +6,8 @@ import styles from './SignIn.module.css'
 import { useNavigate } from 'react-router-dom';
 import {faTwitter} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Button from '@mui/material/Button';
+
 
 
 export default function SignIn() {
@@ -68,16 +70,19 @@ export default function SignIn() {
             </div>
             <div>
               <form  onSubmit={handleSubmit}>
-               
-                  <button ref={userNameRef} >Sign In With Google  </button>
+              <Button variant="contained" sx={{borderRadius:2 ,backgroundColor:'white',color:'black'}}>Sign In With Google</Button>
+                  
+                  <Button variant="contained" sx={{borderRadius:2 ,backgroundColor:'white',color:'black'}}>Sign up with Apple</Button>
+
                 
 
-                  <input ref={userNameRef} type='username' placeholder='username' required/>
+                  <input className={styles.input} ref={userNameRef} type='username' placeholder='username' required/>
                  
-                  <input ref={passwordRef} type='password' placeholder='password' required/>
+                  <input  className={styles.input}  ref={passwordRef} type='password' placeholder='password' required/>
               
 
-                <button className = {styles.signInBtn} type="submit"  >SignIn</button> 
+
+                <Button variant="contained"  type="submit" sx={{borderRadius:2 ,backgroundColor:'black',color:'White'}}>SignIn</Button>
               </form>
             </div>
             <div>
