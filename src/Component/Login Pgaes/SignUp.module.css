@@ -56,7 +56,8 @@
     color: white;
     height: 3rem;
     text-align: center;
-
+text-align: center;
+justify-content: center;
 }
 
 

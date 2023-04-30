@@ -11,35 +11,18 @@ import { useRecoilValue, useSetRecoilState } from 'recoil';
 
 function Home() {
   const isUserSignedIn = useRecoilValue(isUserSignedInAtom);
-  const isUserSignedOut=useSetRecoilState(isUserSignedInAtom)
-    const navigate=useNavigate()
-    
-    // useEffect(()=>{
-    //   let val= JSON.parse(localStorage.getItem("login-success"))
-    //   if(val==true){
-    //    navigate("/")
-    //   }
-    // },[])
-    
-    useEffect(() => {
   
-      if (!isUserSignedIn) {
-        navigate('/signin');
-      }
-    }, [isUserSignedIn]);
+    const navigate=useNavigate()
 
-//     const handleLogout=()=>{
-     
-// if(isUserSignedInAtom){
-//   isUserSignedOut({
-//     isUserSignedIn:false,
-//     userObj:null
- 
-//   })
-//   navigate("/signin");
+    
+    // useEffect(() => {
+  
+    //   if (!isUserSignedIn) {
+    //     navigate('/signin');
+    //   }
+    // }, [isUserSignedIn]);
 
-// }
-//     }
+
 
   return (
    <>
@@ -48,7 +31,7 @@ function Home() {
      <Column1/>
      <Column2/>
      <Column3/>
-     {/* <button onClick={handleLogout}>Logout</button> */}
+    
    </div>
    
    

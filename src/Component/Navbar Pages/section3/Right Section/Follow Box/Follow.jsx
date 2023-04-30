@@ -3,7 +3,7 @@ import FollowButton from "./FollowButton";
 import Styles from "./Follow.module.css"
 
 export default function Follow() {
-  // const [show, setShow] = useState(true);
+
 
   const content = [
     {

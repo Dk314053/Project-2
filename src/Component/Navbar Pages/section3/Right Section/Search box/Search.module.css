@@ -27,3 +27,14 @@
     margin-left: 2rem;
     z-index: 1;
  }
+ @media only screen and (min-width: 200px) and (max-width : 700px) {
+    .searchInput {
+        display: none;
+        width: 0%;
+    }
+    .font {
+        display: none;
+        width: 0%;
+    }
+
+}
