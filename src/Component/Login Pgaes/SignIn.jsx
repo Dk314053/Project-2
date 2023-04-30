@@ -1,5 +1,6 @@
 import React,{useState, useRef, useEffect} from 'react'
-import { Link } from 'react-router-dom';
+import { isUserSignedInAtom } from './Recoil';
+import { useSetRecoilState } from 'recoil';
 import { getUsers } from './localstorage';
 import styles from './SignIn.module.css'
 import { useNavigate } from 'react-router-dom';
@@ -9,9 +10,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function SignIn() {
 
-  const navigate = useNavigate();
+  
 
- 
+  const setUser = useSetRecoilState(isUserSignedInAtom);
 
   const userNameRef = useRef();
   const passwordRef = useRef();
@@ -22,23 +23,6 @@ export default function SignIn() {
   }])
   
   const nav = useNavigate();
-
-  useEffect(() => {
-    const loginSuccesss = JSON.parse(localStorage.getItem("login-success"));
-
-    if (loginSuccesss) {
-      navigate("/");
-    }
-  }, []);
-
-
-  const handleSignin=()=>{
-    localStorage.setItem("login-success", "true");
-    navigate("/");
-  
-
-  }
-
 
   useEffect(()=>{
     const data = getUsers(); 
@@ -56,16 +40,16 @@ export default function SignIn() {
 
 
      const userObj = userList.find((obj)=> obj?.username === userNameRef.current.value && obj?.password === passwordRef.current.value)
-      
+
     if(userObj !== undefined){
+      setUser(true);
       alert(`${userObj?.username} you are succ login`);
-      if(userList.find((obj)=> obj?.purchased===true && obj?.username === userNameRef.current.value)){
-          nav("/")
-      }
+     nav("/")
     
     }else{
       alert("please register first")
     }
+   
   }
 
   function handleSignUp(){
@@ -88,12 +72,12 @@ export default function SignIn() {
                   <button ref={userNameRef} >Sign In With Google  </button>
                 
 
-                  <input ref={userNameRef} type='email' placeholder='email' required/>
+                  <input ref={userNameRef} type='username' placeholder='username' required/>
                  
                   <input ref={passwordRef} type='password' placeholder='password' required/>
               
 
-                <button className = {styles.signInBtn} type="submit" onClick={handleSignin} >SignIn</button> 
+                <button className = {styles.signInBtn} type="submit"  >SignIn</button> 
               </form>
             </div>
             <div>

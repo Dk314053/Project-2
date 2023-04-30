@@ -1,0 +1,29 @@
+.searchInput{
+    height: 2.5rem;
+    width: 60%;
+    padding-left: 3rem;
+    padding-right: 3em;
+    border-radius: 20em;
+ margin-left: 1rem;
+    font-size: 1.1em;
+    margin-top: -1.8em;
+ }
+ 
+ .icon{
+     display: flex;
+     flex-direction: column;
+    
+   
+ }
+ .icon2{
+     font-size: 1.2em;
+     position: absolute;
+     top:0.5em;
+     left:0.5em
+ }
+ .font{
+    margin-top: 1.5rem;
+    position: relative;
+    margin-left: 2rem;
+    z-index: 1;
+ }

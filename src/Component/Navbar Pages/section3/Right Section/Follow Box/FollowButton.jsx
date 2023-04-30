@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Styles from './FollowButton.module.css'
 export default function FollowButton() {
   const [show, setShow] = useState(true);
   return (
@@ -12,6 +12,8 @@ export default function FollowButton() {
             setShow(false);
           }
         }}
+       className={Styles.button}
+
       >
         {show ? "Follow" : "Following"}
       </button>

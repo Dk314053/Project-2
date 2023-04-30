@@ -8,6 +8,7 @@ import Styles from "./Trend.module.css";
 
 export default function Trend() {
 
+
   const content = [
     {
       id: 1,
@@ -46,9 +47,39 @@ export default function Trend() {
       midText: "#BTS",
       botText: "377k Tweets",
     },
-  ];
+    {
+      id: 6,
 
+      inIntrseted: false,
+      upText: "Trending in India",
+      midText: "#कल_भारत_बंद_रहेगा",
+      botText: "45.5K Tweets",
+    },
+    {
+      id: 7,
+
+      inIntrseted: false,
+      upText: "Politics · Trending",
+      midText: "Ukraine",
+      botText: "345K Tweets",
+    },
+    {
+      id: 8,
+
+      inIntrseted: false,
+      upText: "Sports · Trending",
+      midText: "#HitmanBirthdayCDP",
+      botText: "2,106 Tweets",
+    },
+    
+  ];
+  const [showMore, setShowMore] = useState(3);
   const [list, setList] = useState(content);
+const handleShow=()=>{
+ 
+  setShowMore(showMore+3)
+}
+
 
   function notInterested(element) {
 
@@ -73,7 +104,7 @@ export default function Trend() {
       <div className={Styles.box}>
         <h3 style={{paddingLeft:"1rem"}}>What's Happening </h3>
          <img className={Styles.img} src="https://images.unsplash.com/photo-1602674809970-89073c530b0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Zm9vdGJhbGwlMjBwbGF5ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60" alt="dummy img" />
-        {list.map((element) => (
+        {list.slice(0,showMore).map((element) => (
           <div className={Styles.contentmain}>
             <div className={Styles.content}>
               <span>{element.upText}</span>
@@ -94,8 +125,9 @@ export default function Trend() {
             </span>
           </div>
         ))}
-
-        <h4 className={Styles.ShowMore}>Show more</h4>
+          
+  <button className={Styles.ShowMore} onClick={handleShow}> Show More  </button>
+       
       </div>
     </>
   );

@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from "./column2.module.css"
-import Tweet from './tweet/Tweet';
+
 import Post from './post/Post';
 import tweets from './tweets.json'
+import ComposeForm from './tweet/ComposeForm';
 const Column2 = () => {
     
        
@@ -14,10 +15,11 @@ const Column2 = () => {
 
     return (
         <div className={styles.column2}>
-           <Tweet/>
-          { data.map(person =>{
+           <div><ComposeForm/></div>
+           <hr/>
+          <div>{ data.map(person =>{
         return( <Post person={person} />)
-    })}
+    })}</div>
         </div>
     );
 }

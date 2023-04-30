@@ -1,9 +1,9 @@
-import { useSta
+import { useState } from "react";
 import FollowButton from "./FollowButton";
 import Styles from "./Follow.module.css"
 
 export default function Follow() {
-  const [show, setShow] = useState(true);
+  // const [show, setShow] = useState(true);
 
   const content = [
     {
@@ -30,16 +30,42 @@ export default function Follow() {
       dots: "Follow",
       dots3: "Following",
     },
+    {
+      image:
+        "https://pbs.twimg.com/profile_images/1524985235795898368/8mwdw8n3_400x400.png",
+      name: "Snapdragon India",
+      userName: "@Snapdragon_IN",
+      dots: "Follow",
+      dots3: "Following",
+    },
+    {
+      image:
+        "https://pbs.twimg.com/profile_images/1341671435635310592/p4vUY-nx_400x400.jpg",
+      name: "Shraddha",
+      userName: "@ShraddhaKapoor",
+      dots: "Follow",
+      dots3: "Following",
+    },
+    {
+      image:
+        "https://pbs.twimg.com/profile_images/1647628957888708608/ZVPTc70P_400x400.jpg",
+      name: "Rajasthan Royals",
+      userName: "@rajasthanroyals",
+      dots: "Follow",
+      dots3: "Following",
+    },
   ];
-
- 
-
+  const [shows, setShows] = useState(false);
+ const handleShows=()=>{
+  setShows(!shows)
+ }
+ const displayShows=shows? content: content.slice(0,3)
   return (
     <>
       <div className={Styles.box}>
         <h3 style={{paddingLeft:"1rem"}}>Who To Follow </h3>
 
-        {content.map((element) => (
+        {displayShows.map((element) => (
           <div className={Styles.contentmain}>
             <div className={Styles.content}>
               <img
@@ -59,7 +85,7 @@ export default function Follow() {
             </div>
           </div>
         ))}
-        <h4 className={Styles.ShowMore}>Show more</h4>
+        <h4 className={Styles.ShowMore} onClick={handleShows}>{shows ? 'Show Less' : 'Show More'}</h4>
       </div>
     </>
   );
