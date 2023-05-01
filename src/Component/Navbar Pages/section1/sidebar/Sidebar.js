@@ -56,7 +56,7 @@ const handleLogout=()=>{
                 <li>
                     <a href=''>< FaMehBlank className={styles.icons} /><span className={styles.navlink}>More</span></a>
                 </li>
-                <button className={styles.logbtn} onClick={handleLogout} >logout </button>
+             <button className={styles.logbtn} onClick={handleLogout} >logout </button>
                 <div className={styles.sidebar_Btn}>
                     <a href='' id={styles.sbtn}>Tweet</a>
                 </div>
