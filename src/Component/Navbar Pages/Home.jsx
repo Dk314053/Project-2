@@ -7,7 +7,7 @@ import Column1 from './section1/Column1'
 import Column2 from './section2/Column2'
 import Column3 from './section3/Column3'
 import { isUserSignedInAtom } from '../Login Pgaes/Recoil'
-import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { useRecoilValue} from 'recoil';
 
 function Home() {
   const isUserSignedIn = useRecoilValue(isUserSignedInAtom);
@@ -15,12 +15,12 @@ function Home() {
     const navigate=useNavigate()
 
     
-    useEffect(() => {
+    // useEffect(() => {
   
-      if (!isUserSignedIn) {
-        navigate('/signin');
-      }
-    }, [isUserSignedIn]);
+    //   if (!isUserSignedIn) {
+    //     navigate('/signin');
+    //   }
+    // }, [isUserSignedIn]);
 
 
 

@@ -1,4 +1,6 @@
 import React from 'react'
+
+import { useNavigate } from 'react-router-dom';
 import styles from './Sidebar.module.css'
 import {
     FaTwitter,
@@ -13,8 +15,16 @@ import {
 } from 'react-icons/fa'
 // import LoginUser from './LoginUser'
 
-
 const Sidebar = () => {
+
+    const navigate=useNavigate()
+   
+  
+const handleLogout=()=>{
+ 
+      
+     navigate("/signin")
+}
     return (
         <div className={styles.twitter}>
         <div className={styles.sidebar} >
@@ -46,13 +56,13 @@ const Sidebar = () => {
                 <li>
                     <a href=''>< FaMehBlank className={styles.icons} /><span className={styles.navlink}>More</span></a>
                 </li>
+                <button className={styles.logbtn} onClick={handleLogout} >logout </button>
                 <div className={styles.sidebar_Btn}>
                     <a href='' id={styles.sbtn}>Tweet</a>
                 </div>
-                {/* <div className={styles.profile}>
-                    <LoginUser/>
-                </div> */}
+                
             </ul>
+           
         </div>
         </div>
     )
