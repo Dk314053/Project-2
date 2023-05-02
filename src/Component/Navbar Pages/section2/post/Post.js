@@ -10,11 +10,11 @@ function Post(props) {
   const [fourth, setfourth] = useState(props.person.commentCount)
   const handelClick = () => {
     let value = like;
-    value == props.person.commentCount ? setlike(like + 1) : setlike(like - 1)
+    value === props.person.commentCount ? setlike(like + 1) : setlike(like - 1)
   }
   const handelClick2 = () => {
     let value = second;
-    value == props.person.reTweetsCount ? setsecond(second + 1) : setsecond(second - 1)
+    value === props.person.reTweetsCount ? setsecond(second + 1) : setsecond(second - 1)
   }
   
   let toogleIcon = props.person.isLiked
@@ -34,7 +34,7 @@ function Post(props) {
   }
   const handelClick4 = () => {
     let value = fourth;
-    value == props.person.commentCount ? setfourth(fourth + 1) : setfourth(fourth - 1)
+    value === props.person.commentCount ? setfourth(fourth + 1) : setfourth(fourth - 1)
   }
 
   console.log(toogleIcon)
