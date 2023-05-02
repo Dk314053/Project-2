@@ -49,7 +49,7 @@ const Sidebar = () => {
                     <a href=''>< FaMehBlank className={styles.icons1} /><span className={styles.navlink}>More</span></a>
                 </li>
                <PopOver />
-             <button className={styles.logbtn} onClick={handleLogout} >logout </button>
+             
                 <div className={styles.sidebar_Btn}>
                     <a href='' id={styles.sbtn}>Tweet</a>
                 </div>
