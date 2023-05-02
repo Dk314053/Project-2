@@ -4,6 +4,8 @@
     width: 25%;
     position: fixed;
     left: 0;
+    gap: 2px;
+    column-gap: 1px;
     height: 120%;
     border-right: 1px solid #e6ecf0;
 }
@@ -23,25 +25,25 @@
 .icons{
     margin-right: 15px;
     font-size: 25px;
+  
+    margin-top: -8px;
 }
 #logo{
     color: #1da1f2;
 }
-.sidebar_Btn{
-   margin-top: -90px;
-   margin-left: -2rem;
-    
-}
+
 .sidebar_Btn a{
     text-decoration: none;
     background-color: #1da1f2;
     color: #fff;
-    padding: 13px 35px;
-    margin: 0 35px 0 35px;
+    padding: 10px 10px;
+    margin-top: -6.5rem;
+    margin-left: 3rem;
     border-radius: 50px;
     outline: none;
     display: block;
     text-align: center;
+    width: 10rem;
 }
 .sidebar_Btn a:hover{
    background-color: #47a6e0;
@@ -60,6 +62,14 @@
     color: white;
     font-size: 1.2rem;
 }
+.icons1{
+    margin-right: 15px;
+    font-size: 25px;
+  text-align: center;
+  justify-content: center;
+    margin-top: -18px;
+}
+
 /* @media(max-width:1200px) {
     .navlink{
         display: none;
