@@ -81,8 +81,8 @@ function ComposeForm() {
         tweet={tweet}
         time={new Date(2021, 2, 2, 21, 3)}
         source="Twitter for iPhone"
-        permalink="https://twitter.com/randyfactory/status/1366841622495961091" // optional
-       
+        permalink="https://twitter.com/randyfactory/status/1366841622495961091 "  // optional
+        
       />  ))}
     </div>
 
