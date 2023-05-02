@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 // import { getUsers } from '../Login Pgaes/localstorage'
 import styles from "./home.module.css"
 import {useEffect} from 'react'
@@ -19,6 +19,9 @@ function Home() {
   
       if (!isUserSignedIn) {
         navigate('/signin');
+       
+        
+     
       }
     }, [isUserSignedIn]);
 
@@ -27,7 +30,7 @@ function Home() {
   return (
    <>
    <div className={styles.home}>
-
+   
      <Column1/>
      <Column2/>
      <Column3/>
