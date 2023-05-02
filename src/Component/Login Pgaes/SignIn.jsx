@@ -4,9 +4,11 @@ import { useSetRecoilState } from 'recoil';
 import { getUsers } from './localstorage';
 import styles from './SignIn.module.css'
 import { useNavigate } from 'react-router-dom';
-import {faTwitter} from "@fortawesome/free-brands-svg-icons";
+import {faTwitter,faApple} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from '@mui/material/Button';
+import { IconButton } from '@mui/material';
+import { FcGoogle, IconName } from "react-icons/fc";
 
 
 
@@ -70,10 +72,10 @@ export default function SignIn() {
             </div>
             <div>
               <form  onSubmit={handleSubmit}>
-              <Button variant="contained" sx={{borderRadius:2 ,backgroundColor:'white',color:'black'}}>Sign In With Google</Button>
+              
+              <IconButton variant="contained"  sx={{borderRadius:10 ,border: 1 , backgroundColor:'white',color:'black'}}><FcGoogle /> Sign In With Google</IconButton>
                   
-                  <Button variant="contained" sx={{borderRadius:2 ,backgroundColor:'white',color:'black'}}>Sign up with Apple</Button>
-
+                  <IconButton variant="contained"  sx={{borderRadius:10 ,border: 1,backgroundColor:'white',color:'black'}}><FontAwesomeIcon icon={faApple}  /> Sign In With Apple</IconButton>
                 
 
                   <input className={styles.input} ref={userNameRef} type='username' placeholder='username' required/>
@@ -86,7 +88,9 @@ export default function SignIn() {
               </form>
             </div>
             <div>
-              <span>Don't Have an account ?? <button onClick={handleSignUp} className={styles.signUpBtn} >SignUp </button> </span>
+              <span>Don't Have an account ?? <Button variant="text" onClick={handleSignUp} sx={{borderRadius:2 ,backgroundColor:'white',color:'black', textTransform:'capitalize'}}>
+                Signup
+              </Button></span>
             </div>
 
         </div>
