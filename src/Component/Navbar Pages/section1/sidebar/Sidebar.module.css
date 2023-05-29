@@ -71,8 +71,11 @@
     display: none;
 }
 .sidebar{
-    width: 100%;
+    width: 25%;
     margin-left: -3rem;
+}
+.sidebar_Btn{
+    width: 2rem;
 }
 
 }
