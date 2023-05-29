@@ -17,13 +17,12 @@ function Home() {
     
     useEffect(() => {
   
+
       if (!isUserSignedIn) {
         navigate('/signin');
-       
-        
-     
       }
     }, [isUserSignedIn]);
+
 
 
 

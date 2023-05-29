@@ -8,6 +8,7 @@ import {faTwitter} from "@fortawesome/free-brands-svg-icons";
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import Button from '@mui/material/Button';
 
 export default function SignUp() {
   const emailRef = useRef();
@@ -127,7 +128,9 @@ export default function SignUp() {
           <div className={styles.signIn}>
             <span >
               Already Registered ??{" "}
-            <Link to="/signin"> <button className={styles.signInBtn} >SignIn</button></Link> 
+            <Link to="/signin">  <Button variant="text"  sx={{borderRadius:2 ,backgroundColor:'white',color:'black', textTransform:'capitalize'}}>
+                Signin
+              </Button></Link> 
             </span>
           </div>
         </div>

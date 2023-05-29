@@ -12,7 +12,7 @@ form{
 .parentCont{
   
     width: 100%;
-    height: 100%;
+    height: 100vh;
     
    background-color: gray;
     background-repeat: no-repeat;
@@ -24,9 +24,10 @@ form{
 }
 
 .login{
-    margin-top: 5%;
+    margin-top: 3%;
     border: .5px solid gray;
-    width: 50%;
+    width: 40%;
+    
     background-color: white;
     gap: 1rem;
     padding: 2rem;
@@ -41,7 +42,7 @@ form{
 .input{
     display: inline;
    width: 100%;
-   height: 3rem ;
+   height: 2rem ;
     border: 1px solid rgb(184, 178, 178);
     border-radius: .5rem;
     
@@ -53,8 +54,10 @@ form{
 .signInBtn{
     width: 100%;
     height:100%;
-    height: 2rem;
+    height: 3rem;
     cursor: pointer;
+    border: transparent;
+    background-color: transparent;
 }
 
 .signUpBtn{
