@@ -35,7 +35,7 @@ navigate("/signin")
             />
                <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={{ display: "flex", gap: "1rem" }}>
-              
+              {getName.firstname} 
             </span>
             <span>@{getName[getName.length-1].username}</span>
             
