@@ -10,7 +10,7 @@ import { getUsers } from "../../../Login Pgaes/localstorage";
 
 const PopOver = () => {
   const getName = getUsers();
-  console.log(getName)
+ 
   const navigate = useNavigate();
 
   function Loggedout() {

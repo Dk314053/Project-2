@@ -37,7 +37,7 @@ function Post(props) {
     value === props.person.commentCount ? setfourth(fourth + 1) : setfourth(fourth - 1)
   }
 
-  console.log(toogleIcon)
+
 
   return (
     <div className={styles.postss}>
