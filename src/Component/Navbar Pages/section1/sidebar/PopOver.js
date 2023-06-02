@@ -14,7 +14,7 @@ const PopOver = () => {
   const navigate = useNavigate();
 
   function Loggedout() {
-navigate("/signin")
+navigate("/")
   }
 
   return (
