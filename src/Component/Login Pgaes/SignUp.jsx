@@ -128,7 +128,7 @@ export default function SignUp() {
           <div className={styles.signIn}>
             <span >
               Already Registered ??{" "}
-            <Link to="/signin">  <Button variant="text"  sx={{borderRadius:2 ,backgroundColor:'white',color:'black', textTransform:'capitalize'}}>
+            <Link to="/">  <Button variant="text"  sx={{borderRadius:2 ,backgroundColor:'white',color:'black', textTransform:'capitalize'}}>
                 Signin
               </Button></Link> 
             </span>
