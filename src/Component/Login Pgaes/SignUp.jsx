@@ -73,7 +73,7 @@ export default function SignUp() {
 
     localStorage.setItem("users", JSON.stringify(users));
     event.target.reset();
-    nav("/signin")
+    nav("/")
   }
   return (
     <div>
