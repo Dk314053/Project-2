@@ -48,7 +48,7 @@ export default function SignIn() {
     if(userObj !== undefined){
       setUser(true);
       alert(`${userObj?.username} you are succ login`);
-     nav("/")
+     nav("/homepage")
     
     }else{
       alert("please register first")

@@ -10,11 +10,11 @@ import { getUsers } from "../../../Login Pgaes/localstorage";
 
 const PopOver = () => {
   const getName = getUsers();
-  console.log(getName)
+ 
   const navigate = useNavigate();
 
   function Loggedout() {
-navigate("/signin")
+navigate("/")
   }
 
   return (
@@ -35,7 +35,7 @@ navigate("/signin")
             />
                <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={{ display: "flex", gap: "1rem" }}>
-              {getName[getName.length-1].firstname} 
+              {getName.firstname} 
             </span>
             <span>@{getName[getName.length-1].username}</span>
             
