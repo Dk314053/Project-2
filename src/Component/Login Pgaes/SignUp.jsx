@@ -69,6 +69,7 @@ export default function SignUp() {
       firstName: firstNameRef.current.value,
       lastName: lastNameRef.current.value,
       password: passwordRef.current.value,
+      isLoggedIn:false,
     });
 
     localStorage.setItem("users", JSON.stringify(users));
