@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-// import { getUsers } from '../Login Pgaes/localstorage'
+
 import styles from "./home.module.css"
 import {useEffect} from 'react'
 import Column1 from './section1/Column1'
